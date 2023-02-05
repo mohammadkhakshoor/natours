@@ -1,0 +1,231 @@
+.card {
+    height: 73rem;
+
+    @include respond(tab-mid) {
+        height: 73rem;
+        &:not(:last-child) {
+            margin-bottom: 30rem;
+        }
+        &:nth-child(3) {
+            margin-bottom: 25rem;
+        }
+    }
+    &-side {
+        height: 60rem;
+        backface-visibility: hidden;
+        position: relative;
+
+        perspective: 140rem;
+        border-radius: 5px;
+
+        @include respond(tab-mid) {
+            height: 73rem;
+            max-width: 70%;
+            margin: 0 auto;
+            height: auto;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        @include respond(phone) {
+            max-width: 60rem;
+            margin: 0 auto;
+        }
+
+        &__front {
+            @include respond(tab-mid) {
+                position: relative;
+                top: 0;
+                left: 0;
+                border-radius: 0;
+                backface-visibility: visible;
+                height: 72rem;
+            }
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all 0.7s;
+            height: 65rem;
+            width: 100%;
+            transform: rotateY(0deg);
+            border-radius: 5px;
+            box-shadow: 0 0.2rem 3rem rgba($black, 0.02);
+            overflow: hidden;
+
+            backface-visibility: hidden;
+            color: #333;
+
+            &-1 {
+                background-color: #fff;
+            }
+            &-2 {
+                background-color: #fff;
+            }
+            &-3 {
+                background-color: #fff;
+            }
+
+            .card__bg-1 {
+                height: 25rem;
+                background-image: linear-gradient($clr-secondary-300, $clr-secondary-400), url(/img/nat-5.jpg);
+                background-size: cover;
+                clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+                background-blend-mode: screen;
+            }
+            .card__bg-2 {
+                height: 25rem;
+                background-image: linear-gradient($clr-green-300, $clr-green-400), url(/img/nat-6.jpg);
+                background-size: cover;
+                clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+                background-blend-mode: screen;
+            }
+            .card__bg-3 {
+                height: 25rem;
+                background-image: linear-gradient($clr-tertiary-300, $clr-tertiary-400), url(/img/nat-7.jpg);
+                background-size: cover;
+                clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+                background-blend-mode: screen;
+            }
+            .card__heading {
+                text-align: right;
+                // position: relative;
+                display: inline-block;
+                // top: -7rem;
+                // left: 16rem;
+
+                transform: translate(17rem, -8rem);
+
+                padding: 1rem 2rem;
+                font-size: 3rem;
+
+                text-transform: uppercase;
+                font-weight: 300;
+                width: auto;
+                color: #fff;
+                @include respond(tab-mid) {
+                    transform: translate(42rem, -8rem);
+                }
+                @include respond(tab-port) {
+                    transform: translate(30rem, -8rem);
+                }
+                @include respond(phone) {
+                    transform: translate(14rem, -8rem);
+                }
+                &-1 {
+                    background: linear-gradient(
+                        to right,
+                        rgba($clr-secondary-300, 0.9),
+                        rgba($clr-secondary-400, 0.7)
+                    );
+                }
+                &-2 {
+                    background: linear-gradient(
+                        to right,
+                        rgba($clr-green-300, 0.9),
+                        rgba($clr-green-400, 0.7)
+                    );
+                }
+                &-3 {
+                    background: linear-gradient(
+                        to right,
+                        rgba($clr-tertiary-300, 0.9),
+                        rgba($clr-tertiary-400, 0.7)
+                    );
+                }
+            }
+            .card__details {
+                margin-top: -4rem;
+            }
+            ul {
+                padding: 1rem;
+                list-style: none;
+                font-size: 1.8rem;
+                text-align: center;
+                width: 80%;
+                margin: 0 auto;
+                li {
+                    padding: 2rem 0;
+                    &:not(:last-child) {
+                        border-bottom: 1px solid #ddd;
+                    }
+                }
+            }
+        }
+        &__back {
+            @include respond(tab-mid) {
+                transform: rotateY(0);
+                position: relative;
+                top: -9rem;
+                height: auto;
+                border-radius: 0;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                gap: 2rem;
+                padding: 6rem 1rem 4rem 1rem;
+                clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+                font-size: 1.6rem;
+                transform: rotateY(0);
+                backface-visibility: visible;
+            }
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all 0.7s;
+            width: 100%;
+            height: 65rem;
+            transform: rotateY(180deg);
+            border-radius: 5px;
+            box-shadow: 0 0.2rem 4rem rgba($black, 0.2);
+
+            backface-visibility: hidden;
+            color: white;
+            &-only {
+                text-transform: uppercase;
+                font-size: 2rem;
+            }
+            &-price {
+                font-size: 8rem;
+                font-weight: 100;
+                margin-top: 15rem;
+                @include respond(tab-mid) {
+                    font-size: 6rem;
+                    margin-top: 2rem;
+                }
+            }
+            &-book {
+                margin-top: 15rem;
+                @include respond(tab-mid) {
+                    margin-top: 1rem;
+                }
+            }
+
+            &-1 {
+                background-image: linear-gradient(to right bottom, $clr-secondary-300, $clr-secondary-400);
+            }
+            &-2 {
+                background-image: linear-gradient(to right bottom, $clr-green-300, $clr-green-400);
+            }
+            &-3 {
+                background-image: linear-gradient(to right bottom, $clr-tertiary-300, $clr-tertiary-400);
+            }
+        }
+        &:hover &__front {
+            transform: rotateY(-180deg);
+            @include respond(tab-mid) {
+                transform: rotateY(0);
+            }
+        }
+        &:hover &__back {
+            transform: rotateY(0deg);
+            @include respond(tab-mid) {
+                transform: rotateY(0);
+            }
+        }
+    }
+}

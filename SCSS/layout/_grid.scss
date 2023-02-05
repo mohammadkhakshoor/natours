@@ -1,0 +1,35 @@
+.grid-layout {
+    display: grid;
+
+    &-2-col {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6rem;
+    }
+    @include respond(tab-mid) {
+        grid-template-columns: 1fr;
+    }
+    &-4-col {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 6rem;
+
+        @include respond(tab-mid) {
+            grid-template-columns: 1fr 1fr;
+        }
+        @include respond(phone) {
+            grid-template-columns: 1fr;
+        }
+    }
+    &-3-col {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6rem;
+        @include respond(tab-mid) {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+    }
+}
+
+.grid-center {
+    justify-items: center;
+    gap: 10rem;
+}

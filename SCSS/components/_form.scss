@@ -1,0 +1,95 @@
+.form {
+    width: 50%;
+    padding: 3rem 3rem;
+    font-family: inherit;
+    font-size: inherit;
+    @include respond(tab-mid) {
+        width: 65%;
+    }
+    @include respond(phone) {
+        width: 100%;
+    }
+
+    &__content {
+        &-group:not(:last-child) {
+            margin-bottom: 1.5rem;
+        }
+        &-input {
+            width: 90%;
+            @include respond(phone) {
+                width: 100%;
+            }
+            padding: 1.3rem 2rem;
+            font-size: 1.8rem;
+            margin-bottom: 0.4rem;
+            border-radius: 3px;
+            display: block;
+
+            outline: none;
+            border: none;
+            border-bottom: 3px solid transparent;
+            box-shadow: 0 1rem 2rem rgba($black, 0.12);
+
+            &::-webkit-input-placeholder {
+                color: #999;
+            }
+            &:focus {
+                border-bottom: 3px solid $clr-green-500;
+            }
+            &:focus:invalid {
+                border-bottom: 3px solid red;
+            }
+        }
+        &-label {
+            display: block;
+            font-size: 1.4rem;
+            margin-left: 2rem;
+            color: #555;
+            transition: all 0.2s;
+        }
+        &-input:placeholder-shown + &-label {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-4rem);
+        }
+    }
+    &__radio {
+        font-size: 2rem;
+        padding: 0 1rem;
+        display: inline-block;
+        @include respond(phone) {
+            margin-bottom: 2rem;
+        }
+
+        input:checked + label ::after {
+            opacity: 1;
+        }
+        input {
+            display: none;
+        }
+
+        &-btn {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            display: inline-block;
+            border: 5px solid $clr-green-500;
+            position: relative;
+            top: 0.8rem;
+
+            &::after {
+                content: "";
+                width: 1.3rem;
+                height: 1.3rem;
+                display: inline-block;
+                border-radius: 50%;
+                background-color: $clr-green-500;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+            }
+        }
+    }
+}

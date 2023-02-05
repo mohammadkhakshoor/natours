@@ -1,0 +1,33 @@
+@mixin rotate-skew {
+    color: $clr-green-500;
+    transform: skewY(2deg) scale(1.04);
+    box-shadow: 0 0.5rem 1rem rgba($black, 0.4);
+}
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == tab-land {
+        @media (max-width: 1367px) {
+            @content;
+        }
+    }
+    @if $breakpoint == tab-mid {
+        @media (max-width: 1200px) {
+            @content;
+        }
+    }
+    @if $breakpoint == tab-port {
+        @media (max-width: 900px) {
+            @content;
+        }
+    }
+    @if $breakpoint == phone {
+        @media (max-width: 600px) {
+            @content;
+        }
+    }
+    @if $breakpoint == big-desktop {
+        @media (min-width: 2000px) {
+            @content;
+        }
+    }
+}

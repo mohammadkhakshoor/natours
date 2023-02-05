@@ -1,0 +1,29 @@
+.header {
+    position: relative;
+    height: 93vh;
+    background-image: linear-gradient(to right bottom, rgba($clr-green-300, 0.7), rgba($clr-green-500, 0.7)),
+        url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 0 96%, 0 97%, 100% 71%, 100% 74%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 96%, 0 97%, 100% 71%, 100% 74%, 0 100%);
+    @include respond(phone) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 96%, 0 97%, 100% 81%, 100% 84%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 0 96%, 0 97%, 100% 81%, 100% 84%, 0 100%);
+    }
+    &-logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+    .logo {
+        height: 3.5rem;
+    }
+    &-text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
