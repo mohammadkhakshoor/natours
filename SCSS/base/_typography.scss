@@ -56,6 +56,9 @@
         transform: skewX(5deg) skewY(1deg);
         text-shadow: 0rem 0.5rem 1rem rgba($black, 0.2);
     }
+    @include respond(phone) {
+        font-size: 3rem;
+    }
 }
 
 .heading-tertiary {

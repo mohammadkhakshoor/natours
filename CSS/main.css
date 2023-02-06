@@ -168,6 +168,11 @@ body {
   transform: skewX(5deg) skewY(1deg);
   text-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
+@media (max-width: 600px) {
+  .heading-secondary {
+    font-size: 3rem;
+  }
+}
 
 .heading-tertiary {
   text-transform: uppercase;
@@ -573,7 +578,7 @@ body {
 }
 @media (max-width: 600px) {
   .popup__content {
-    width: 85%;
+    width: 80%;
   }
 }
 .popup:target .popup__content {
@@ -593,7 +598,7 @@ body {
 }
 @media (max-width: 600px) {
   .popup__img {
-    width: 100%;
+    width: 50%;
     display: block;
   }
 }
