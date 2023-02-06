@@ -24,6 +24,7 @@ html {
     @include respond(big-desktop) {
         font-size: 75%;
     }
+    scroll-behavior: smooth;
 }
 
 body {
