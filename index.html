@@ -11,8 +11,8 @@
             rel="stylesheet"
         />
 
-        <link rel="stylesheet" href="css/icon-font.css" />
-        <link rel="stylesheet" href="css/main.css" />
+        <!-- <link rel="stylesheet" href="css/icon-font.css" /> -->
+        <link rel="stylesheet" href="css/style.css" />
         <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
         <title>Natours | Exciting tours for adventurous people</title>
@@ -87,6 +87,25 @@
                         </div>
                         <div class="component">
                             <img
+                                srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                                sizes="(max-width:900px) 20vw,(max-width:600px) 30vw , 300px"
+                                alt="a photo of a landscape"
+                                class="component__photo component__photo-p1"
+                            />
+                            <img
+                                srcset="img/nat-2.jpg, img/nat-2-large.jpg"
+                                sizes="(max-width:900px) 20vw,(max-width:600px) 30vw , 300px"
+                                alt="a photo of a landscape"
+                                class="component__photo component__photo-p2"
+                            />
+                            <img
+                                srcset="img/nat-3.jpg, img/nat-3-large.jpg"
+                                sizes="(max-width:900px) 20vw,(max-width:600px) 30vw , 300px"
+                                alt="a photo of a landscape"
+                                class="component__photo component__photo-p3"
+                            />
+                            <!--
+                            <img
                                 src="img/nat-1-large.jpg"
                                 alt="photo1"
                                 class="component__photo component__photo-p1"
@@ -101,6 +120,7 @@
                                 alt="photo1"
                                 class="component__photo component__photo-p3"
                             />
+                            -->
                         </div>
                     </div>
                 </div>
@@ -322,7 +342,9 @@
         <footer class="section-footer">
             <div class="smaller-container">
                 <div class="center-text">
-                    <img class="footer__logo" src="img/logo-green-2x.png" alt="logo of the natorus company" />
+                    <picture>
+                        <source srcset="" />
+                    </picture>
                 </div>
                 <div class="grid-layout grid-layout-2-col margin-top-huge grid-center">
                     <div class="footer__link">
